@@ -14,5 +14,4 @@ security:
   oauth2:
     resource:
       jwt:
-        key-value: 123
-
+        signkey: 123#$%
