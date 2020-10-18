@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import org.springframework.core.io.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -84,7 +83,7 @@ public class GatewayConfiguration extends ResourceServerConfigurerAdapter {
 	    @Bean
 	    public JwtAccessTokenConverter accessTokenConverter() {
 	        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-	        Resource resource = new ClassPathResource("public.txt");
+	        Resource resource = new ClassPathResource("publichy.txt");
 	        String publicKey = null;
 	        try {
 	            publicKey = IOUtils.toString(resource.getInputStream());
